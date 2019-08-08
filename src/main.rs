@@ -4,10 +4,8 @@ use std::process;
 use fgrep::Config;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-
     // here the error handled using unwrap to collect the result
-    let config = Config::new(&args).unwrap_or_else(|error| {
+    let config = Config::new(env::args()).unwrap_or_else(|error| {
         eprintln!("Problem parsing arguments: {}", error);
         process::exit(1);
     });

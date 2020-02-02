@@ -1,2 +1,2 @@
 # fgrep
-a rust cli tool for parsing log file
+a rust cli client for parsing log file
